@@ -1,6 +1,7 @@
 # custom ignore for heavy fem files
 pdf_2024Fall/pptx_format_SQC/*
 tutorials/ansys_backup/*
+tutorials/pyEPR_tutorial1.aedtresults/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
