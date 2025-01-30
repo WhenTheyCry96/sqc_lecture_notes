@@ -313,7 +313,7 @@ $begin 'AnsoftProject'
 				VariableProp('jj_w', 'UD', '', '50um')
 				VariableProp('pad_w', 'UD', '', '0.75mm')
 				VariableProp('pad_h', 'UD', '', '350um')
-				VariableProp('Lj_1', 'UD', '', '12nH')
+				VariableProp('Lj_1', 'UD', '', '8nH')
 				VariableProp('Cj_1', 'UD', '', '2fF')
 			$end 'Properties'
 			VariableOrders[12: 'width', 'height', 'length', 'c_w', 'c_h', 'c_l', 'pad_gap', 'jj_w', 'pad_w', 'pad_h', 'Lj_1', 'Cj_1']
@@ -334,7 +334,7 @@ $begin 'AnsoftProject'
 			WorkingCS=1
 			$begin 'GeometryCore'
 				BlockVersionID=3
-				DataVersion=19
+				DataVersion=21
 				NativeKernel='PARASOLID'
 				NativeKernelVersionID=23
 				Units='mm'
@@ -1922,14 +1922,14 @@ $begin 'AnsoftProject'
 				MoveBackwards=false
 			$end 'HfssGlobalData'
 			$begin 'SolveSetups'
-				NextUniqueID=6
+				NextUniqueID=9
 				MoveBackwards=false
 				$begin 'Setup1'
-					ID=5
+					ID=8
 					SetupType='HfssEigen'
 					MinimumFrequency='2GHz'
 					NumModes=2
-					MaxDeltaFreq=0.5
+					MaxDeltaFreq=1
 					ConvergeOnRealFreq=true
 					MaximumPasses=15
 					MinimumPasses=1
@@ -2006,12 +2006,12 @@ $begin 'AnsoftProject'
 				$end 'SurfaceMeshSummary'
 			$end 'FieldsCalculator'
 			$begin 'PlotDefaults'
-				Default_SolutionId=938
+				Default_SolutionId=1191
 				Default_PlotFolder='Automatic'
 				Default_Phase='0deg'
 			$end 'PlotDefaults'
 			$begin 'FieldsPlotManagerID'
-				NextUniqueID=3
+				NextUniqueID=4
 				MoveBackwards=false
 				NumQuantityType=0
 				NumPlots=0
@@ -2032,20 +2032,19 @@ $begin 'AnsoftProject'
 		$begin 'SolutionManager'
 			$begin 'SimSetup'
 				TypeName='BaseSetup'
-				ID=936
+				ID=1189
 				Name='Setup1'
 				$begin 'Solution'
-					ID=937
+					ID=1190
 					Name='AdaptivePass'
 					$begin 'SimDataExtractor'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
 				$end 'Solution'
 				$begin 'Solution'
-					ID=938
+					ID=1191
 					Name='LastAdaptive'
 					$begin 'SimDataExtractor'
-						SimValue('Mag_E', 1, 154, false, SimValueID=976, 3, 0, 2, 0, false, false, 6, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'PostprocessSweep'
 								Variable='NormalizedDistance'
@@ -2135,7 +2134,7 @@ $begin 'AnsoftProject'
 							$end 'Sweep'
 							$begin 'Sweep'
 								Variable='Lj_1'
-								Column='12nH'
+								Column='8nH'
 								Units='nH'
 							$end 'Sweep'
 							$begin 'Sweep'
@@ -2161,9 +2160,9 @@ $begin 'AnsoftProject'
 			$begin 'ID Map'
 				$begin 'Setup'
 					N='Setup1'
-					I=936
-					Soln(N='AdaptivePass', I=937)
-					Soln(N='LastAdaptive', I=938)
+					I=1189
+					Soln(N='AdaptivePass', I=1190)
+					Soln(N='LastAdaptive', I=1191)
 				$end 'Setup'
 			$end 'ID Map'
 		$end 'SolutionManager'
@@ -3963,22 +3962,9 @@ $begin 'AnsoftProject'
 	$end 'Q3DModel'
 	$begin 'DataInstances'
 		DesignEditor='TopLevel'
-		Refdes('0', 'U1')
 		Refdes('1', 'U2')
+		Refdes('0', 'U1')
 		$begin 'CompInstances'
-			$begin 'Compinst'
-				ID='0'
-				Status='Status'
-				CompName='1. single_transmon'
-				GatesInUse()
-				$begin 'Properties'
-					TextProp('ID', 'SRID', '', '0')
-				$end 'Properties'
-				$begin 'Parameters'
-					MenuProp('CoSimulator', 'OHD', '', 'DefaultNetlist', 0)
-					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
-				$end 'Parameters'
-			$end 'Compinst'
 			$begin 'Compinst'
 				ID='1'
 				Status='Status'
@@ -3992,36 +3978,20 @@ $begin 'AnsoftProject'
 					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
 				$end 'Parameters'
 			$end 'Compinst'
-		$end 'CompInstances'
-		$begin 'Instance'
-			DesignEditor='1. single_transmon'
-			ID='0'
-			$begin 'HfssDesignInstance'
-				DesignInstanceID=1
-				$begin 'ReportSetup'
-					$begin 'ReportManager'
-						$begin 'Reports'
-						$end 'Reports'
-						NextUniqueID=51
-						MoveBackwards=false
-						$begin 'NextVersID'
-							NextUniqueID=198
-							MoveBackwards=false
-						$end 'NextVersID'
-					$end 'ReportManager'
-					$begin 'Reports'
-					$end 'Reports'
-					$begin 'ReportsWindowInfoList'
-					$end 'ReportsWindowInfoList'
-				$end 'ReportSetup'
+			$begin 'Compinst'
+				ID='0'
+				Status='Status'
+				CompName='1. single_transmon'
+				GatesInUse()
 				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '0')
 				$end 'Properties'
-				$begin 'UserDefinedDocument'
-					$begin 'Data'
-					$end 'Data'
-				$end 'UserDefinedDocument'
-			$end 'HfssDesignInstance'
-		$end 'Instance'
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'OHD', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+			$end 'Compinst'
+		$end 'CompInstances'
 		$begin 'Instance'
 			DesignEditor='2. Q3DDesign'
 			ID='1'
@@ -4050,6 +4020,35 @@ $begin 'AnsoftProject'
 					$end 'Data'
 				$end 'UserDefinedDocument'
 			$end 'Q3DDesignInstance'
+		$end 'Instance'
+		$begin 'Instance'
+			DesignEditor='1. single_transmon'
+			ID='0'
+			$begin 'HfssDesignInstance'
+				DesignInstanceID=1
+				$begin 'ReportSetup'
+					$begin 'ReportManager'
+						$begin 'Reports'
+						$end 'Reports'
+						NextUniqueID=51
+						MoveBackwards=false
+						$begin 'NextVersID'
+							NextUniqueID=198
+							MoveBackwards=false
+						$end 'NextVersID'
+					$end 'ReportManager'
+					$begin 'Reports'
+					$end 'Reports'
+					$begin 'ReportsWindowInfoList'
+					$end 'ReportsWindowInfoList'
+				$end 'ReportSetup'
+				$begin 'Properties'
+				$end 'Properties'
+				$begin 'UserDefinedDocument'
+					$begin 'Data'
+					$end 'Data'
+				$end 'UserDefinedDocument'
+			$end 'HfssDesignInstance'
 		$end 'Instance'
 		$begin 'SODInfo'
 			$begin '1. single_transmon'

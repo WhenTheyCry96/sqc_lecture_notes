@@ -1,5 +1,6 @@
 # custom ignore for heavy fem files
 pdf_2024Fall/pptx_format_SQC/*
+pdf_2024Fall/videos/*
 tutorials/ansys_backup/*
 tutorials/pyEPR_tutorial1.aedtresults/*
 
