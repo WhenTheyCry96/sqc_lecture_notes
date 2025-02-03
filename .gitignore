@@ -3,6 +3,9 @@ pdf_2024Fall/pptx_format_SQC/*
 pdf_2024Fall/videos/*
 tutorials/ansys_backup/*
 tutorials/pyEPR_tutorial1.aedtresults/*
+tutorials/hfss_eig_f_convergence.csv
+tutorials/pyEPR_tutorial1.aedt.*
+tutorials/shot750*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -59,3 +62,6 @@ ipython_config.py
 # Ignore all local history of files
 .history
 .ionide
+tutorials/shot750.png
+tutorials/shot750.png
+tutorials/pyEPR_tutorial1.aedt.lock
