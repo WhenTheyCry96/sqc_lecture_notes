@@ -4,8 +4,9 @@ pdf_2024Fall/videos/*
 tutorials/ansys_backup/*
 tutorials/pyEPR_tutorial1.aedtresults/*
 tutorials/hfss_eig_f_convergence.csv
-tutorials/pyEPR_tutorial1.aedt.*
-tutorials/shot750*
+tutorials/pyEPR_tutorial1.aedt.auto
+tutorials/pyEPR_tutorial1.aedt.lock
+tutorials/shot750.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
